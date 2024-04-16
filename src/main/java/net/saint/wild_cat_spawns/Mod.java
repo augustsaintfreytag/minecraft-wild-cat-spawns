@@ -25,5 +25,20 @@ public class Mod implements ModInitializer {
 	public void onInitialize() {
 		AutoConfig.register(WildCatSpawnsConfig.class, JanksonConfigSerializer::new);
 		config = AutoConfig.getConfigHolder(WildCatSpawnsConfig.class).getConfig();
+
+		if (config.enableCatSpawns) {
+			modifyBiomeSpawns();
+		}
+	}
+
+	private void modifyBiomeSpawns() {
+		// Add spawn for `entity.minecraft.cat` to Minecraft plains biome.
+		Identifier spawnIdentifier = new Identifier("wild_cat_spawns", "cat_spawns");
+		BiomeModifications.create(spawnIdentifier).add(ModificationPhase.ADDITIONS, BiomeSelectors.foundInOverworld(), context -> {
+			SpawnGroup spawnGroup = SpawnGroup.CREATURE;
+			SpawnEntry spawnEntry = new SpawnEntry(EntityType.CAT, 5, 1, 1);
+			
+			context.getSpawnSettings().addSpawn(spawnGroup, spawnEntry);
+		});
 	}
 }
