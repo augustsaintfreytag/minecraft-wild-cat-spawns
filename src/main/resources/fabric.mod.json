@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "wild_cat_spawns",
+  "version": "${version}",
+
+  "name": "Wild Cat Spawns",
+  "description": "Allows cats to spawn in various biomes instead of only in villages.",
+  "authors": [
+    "saint"
+  ],
+  "contact": {
+    "sources": "https://github.com/augustsaintfreytag/minecraft-wild-cat-spawns"
+  },
+
+  "license": "MIT",
+  "icon": "assets/wild_cat_spawns/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.saint.wild_cat_spawns.Mod"
+    ],
+    "client": [
+      "net.saint.wild_cat_spawns.ClientMod"
+    ],
+    "modmenu": [
+      "net.saint.wild_cat_spawns.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "wild_cat_spawns.mixin.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": ">=1.20",
+    "java": ">=17"
+  }
+}
