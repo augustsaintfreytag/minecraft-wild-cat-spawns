@@ -1,0 +1,8 @@
+{
+	"text.autoconfig.wild_cat_spawns.title": "Wild Cat Spawns",
+	"text.autoconfig.wild_cat_spawns.option.enableCatSpawns": "Enable Cat Spawns",
+	"text.autoconfig.wild_cat_spawns.option.catSpawnWeight": "Cat Spawn Weight",
+	"text.autoconfig.wild_cat_spawns.option.catSpawnMinGroupSize": "Cat Spawn Min Group Size",
+	"text.autoconfig.wild_cat_spawns.option.catSpawnMaxGroupSize": "Cat Spawn Max Group Size"
+
+}
