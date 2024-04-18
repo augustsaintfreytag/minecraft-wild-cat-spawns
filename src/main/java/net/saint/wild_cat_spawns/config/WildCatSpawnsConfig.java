@@ -8,4 +8,13 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 public class WildCatSpawnsConfig implements ConfigData {
     @Comment("Enables cat spawns in the wild. Default: true")
     public boolean enableCatSpawns = true;
+
+	@Comment("The weight of cat spawns. Default: 4")
+	public int catSpawnWeight = 4;
+
+	@Comment("The minimum number of cats that can spawn. Default: 1")
+	public int catSpawnMinGroupSize = 1;
+
+	@Comment("The maximum number of cats that can spawn. Default: 1")
+	public int catSpawnMaxGroupSize = 1;
 }
